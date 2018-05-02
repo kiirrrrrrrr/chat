@@ -1,0 +1,23 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "chat",
+  "main": "index.js",
+  "scripts": {
+    "start:server": "./node_modules/.bin/static-server .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiirrrrrrrr/chat.git"
+  },
+  "author": "kiirrrrrrrr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kiirrrrrrrr/chat/issues"
+  },
+  "homepage": "https://github.com/kiirrrrrrrr/chat#readme",
+  "devDependencies": {
+    "static-server": "^2.2.1"
+  }
+}
