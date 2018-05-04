@@ -14,7 +14,6 @@ class App {
             element: document.createElement('div'),
             onSubmit: message => {
                 this.chat.addMessage(message);
-                this.render();
             }
         });
         this.form.element.classList.add('app__form');
