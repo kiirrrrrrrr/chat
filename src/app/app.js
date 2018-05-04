@@ -31,7 +31,7 @@ class App {
         let header = document.createElement('header');
         header.className = 'app__header'
         header.innerHTML = `
-            <h1 class="app__headline">kii_chat &#x1F916<h1>
+            <h1 class="app__headline">kiirrrr_chat &#x1F916<h1>
         `;
 
         return header;
