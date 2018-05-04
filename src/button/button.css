@@ -1,0 +1,27 @@
+.button {
+    display: block;
+
+    box-sizing: border-box;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 10px;
+
+    background-color: #f6e58d;
+    transition: all 0.2s;
+
+    outline: none;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #7ed6df;
+}
+
+.button:active {
+    transform: scale(0.9);
+}

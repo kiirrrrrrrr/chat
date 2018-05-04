@@ -1,27 +1,31 @@
-class Form {
-    constructor({element, onSubmit}) {
-        this.element = element;
+class Form extends Component {
+    constructor({onSubmit}) {
+        super(document.createElement('form'));
         this.element.className = 'form';
 
         this.callback = onSubmit;
 
-        this._initEvents();
+        super.render(`
+            <label class="form__label" for="author">Name</label>
+            <input class="form__author" type="text" name="author" id="author" placeholder="Your name"></input>
+            <label class="form__label" for="message">Message</label>
+            <textarea class="form__message" name="message" id="message" placeholder="Your message"></textarea>  
+            ${this._renderButton()}
+        `);
+
+        this._initEvents('submit', this._onSubmit);
     }
 
-    render() {
-        this.element.innerHTML = `
-            <form class="form__element">
-                <label class="form__label" for="author">Name</label>
-                <input class="form__author" type="text" name="author" id="author" placeholder="Your name"></input>
-                <label class="form__label" for="message">Message</label>
-                <textarea class="form__message" name="message" id="message" placeholder="Your message"></textarea>  
-                <input class="form__submit" type="submit" value="Send message">
-            </form>
-        `;
-    }
+    _renderButton() {
+        let button = new Button({
+            element: document.createElement('div'),
+            type: 'submit',
+            text: 'Send message'
+        });
 
-    _initEvents() {
-        this.element.addEventListener('submit', this._onSubmit.bind(this));
+        button.element.classList.add('form__submit');
+
+        return button.element.outerHTML;
     }
 
     _onSubmit(event) {

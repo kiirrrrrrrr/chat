@@ -5,7 +5,6 @@ class App {
         this.header = this._renderHeader();
 
         this.chat = new Chat({
-            element: document.createElement('div'),
             data: { messages: [] }
         });
         this.chat.element.classList.add('app__chat');
@@ -20,8 +19,6 @@ class App {
     }
 
     render() {
-        this.chat.render();
-        this.form.render();
 
         this.element.append(this.header, this.chat.element, this.form.element);
     }
