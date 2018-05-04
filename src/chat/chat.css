@@ -34,18 +34,18 @@
 }
 
 .chat__message-author {
-    margin-bottom: 0;
-
     font-weight: bold;
 }
 
 .chat__message-time {
-    font-size: 10px;
+    margin-left: 10px;
+    
+    font-size: 12px;
 }
 
 .chat__message-buttons {
     position: absolute;
-    top: 50%;
+    top: 30px;
     right: 10px;
 
     transform: translateY(-50%);
@@ -55,5 +55,15 @@
 .chat__message-text {
     margin-top: 10px;
     margin-bottom: 0;
+
+    width: 360px;
+}
+
+.chat__button {
+    max-width: 80px;
+}
+
+.chat__button--remove:hover {
+    background-color: #ff7979;
 }
 

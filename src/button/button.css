@@ -10,10 +10,12 @@
     font-family: inherit;
     font-size: 12px;
     line-height: 10px;
+    text-overflow: ellipsis;
 
     background-color: #f6e58d;
     transition: all 0.2s;
 
+    overflow: hidden;
     outline: none;
 }
 

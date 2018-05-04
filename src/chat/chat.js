@@ -75,7 +75,7 @@ class Chat extends Component {
 
         let messageHtml =  `
             <div class="chat__message">
-                <p class="chat__message-author">${author}</p>
+                <span class="chat__message-author">${author}</span>
                 <time class="chat__message-time">${this._getMessageTime()}</time>
                 <div class="chat__message-buttons">
                     ${this._renderMessageButtons()}

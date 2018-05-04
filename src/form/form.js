@@ -7,9 +7,9 @@ class Form extends Component {
 
         super.render(`
             <label class="form__label" for="author">Name</label>
-            <input class="form__author" type="text" name="author" id="author" placeholder="Your name"></input>
+            <input class="form__author" type="text" name="author" id="author" placeholder="Your name" required></input>
             <label class="form__label" for="message">Message</label>
-            <textarea class="form__message" name="message" id="message" placeholder="Your message"></textarea>  
+            <textarea class="form__message" name="message" id="message" placeholder="Your message" required></textarea>  
             ${this._renderButton()}
         `);
 
