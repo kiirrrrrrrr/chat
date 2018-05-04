@@ -1,0 +1,41 @@
+.chat {
+    height: 458px;
+    overflow-y: scroll;
+}
+
+.chat__list {
+    padding: 0;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.chat__item {
+    margin-bottom: 30px;
+}
+
+.chat__message {
+    display: inline-block;
+
+    box-sizing: border-box;
+    max-width: 80%;
+    min-width: 40%;
+    border-radius: 4px;
+
+    font-size: 15px;
+}
+
+.chat__message-author {
+    margin-bottom: 0;
+
+    font-weight: bold;
+}
+
+.chat__message-time {
+    font-size: 10px;
+}
+
+.chat__message-text {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+

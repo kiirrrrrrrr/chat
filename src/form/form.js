@@ -11,8 +11,10 @@ class Form {
     render() {
         this.element.innerHTML = `
             <form class="form__element">
-                <textarea class="form__author" name="author"></textarea>
-                <textarea class="form__message" name="message"></textarea>
+                <label class="form__label" for="author">Name</label>
+                <input class="form__author" type="text" name="author" id="author" placeholder="Your name"></input>
+                <label class="form__label" for="message">Message</label>
+                <textarea class="form__message" name="message" id="message" placeholder="Your message"></textarea>  
                 <input class="form__submit" type="submit" value="Send message">
             </form>
         `;
@@ -25,13 +27,14 @@ class Form {
     _onSubmit(event) {
         event.preventDefault();
 
-        let target = event.target;
-        let data = {
-            author: target.querySelector('.form__author').value,
-            text: target.querySelector('.form__message').value
-        }
+        let form = event.target;
 
-        this.callback();
-        target.reset();
+        let data = {
+            author: form.querySelector('.form__author').value,
+            text: form.querySelector('.form__message').value
+        }
+        this.callback(data);
+        
+        form.reset();
     }
 }

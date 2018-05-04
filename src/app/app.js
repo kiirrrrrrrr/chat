@@ -2,15 +2,13 @@ class App {
     constructor(element) {
         this.element = element;
 
+        this.header = this._renderHeader();
+
         this.chat = new Chat({
             element: document.createElement('div'),
-            data: {
-                messages: [
-                    {text: 'Hello', author: 'Ivan'},
-                    {text: 'Hello Moto', author: 'Vovua'}
-                ]
-            }
+            data: { messages: [] }
         });
+        this.chat.element.classList.add('app__chat');
 
         this.form = new Form({
             element: document.createElement('div'),
@@ -19,12 +17,23 @@ class App {
                 this.render();
             }
         });
-
-        this.element.append(this.chat.element, this.form.element);
+        this.form.element.classList.add('app__form');
     }
 
     render() {
         this.chat.render();
         this.form.render();
+
+        this.element.append(this.header, this.chat.element, this.form.element);
+    }
+
+    _renderHeader() {
+        let header = document.createElement('header');
+        header.className = 'app__header'
+        header.innerHTML = `
+            <h1 class="app__headline">kii_chat &#x1F916<h1>
+        `;
+
+        return header;
     }
 }
