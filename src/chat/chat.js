@@ -21,7 +21,7 @@ class Chat extends Component {
                 <ul class="chat__list">
                     ${this._renderMessages()}
                 </ul>
-            `
+            `;
         }
 
         super.render(innerHtml);
@@ -65,7 +65,6 @@ class Chat extends Component {
                 </li>
             `;
         }).join('');
-        console.log(messagesHtml);
         return messagesHtml;
     }
     

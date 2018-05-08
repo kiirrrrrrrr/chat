@@ -25,7 +25,7 @@ class App {
 
     _renderHeader() {
         let header = document.createElement('header');
-        header.className = 'app__header'
+        header.className = 'app__header';
         header.innerHTML = `
             <h1 class="app__headline">kiirrrr_chat &#x1F916<h1>
         `;

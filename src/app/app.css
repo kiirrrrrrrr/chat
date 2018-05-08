@@ -12,7 +12,7 @@
 
     font-family: 'Rubik', sans-serif;
 
-    background-image: linear-gradient(to right, #f6e58d, #c7e89c, #9ee6b5, #83e0ce, #7ed6df);
+    background-image: linear-gradient(to bottom, #f6e58d, #c7e89c, #9ee6b5, #83e0ce, #7ed6df);
 }
 
 .app__header {

@@ -36,7 +36,7 @@ class Form extends Component {
         let data = {
             author: form.querySelector('.form__author').value,
             text: form.querySelector('.form__message').value
-        }
+        };
         this.callback(data);
         
         form.reset();
